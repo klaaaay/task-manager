@@ -1,0 +1,236 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:rgb(8, 0, 0);
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+h1, h2 {
+    color: #4e73df;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #3a3a3a;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.mode-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+body.dark .mode-toggle {
+    color: #f0f0f0;
+}
+
+#task-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark #task-form {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+#task-input, #task-date, #task-time, #task-priority {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+body.dark #task-input, body.dark #task-date, body.dark #task-time, body.dark #task-priority {
+    background-color: #555;
+    color: #fff;
+}
+
+#task-input:focus, #task-date:focus, #task-time:focus, #task-priority:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 5px rgba(78, 115, 223, 0.5);
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #4e73df;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #2e59d9;
+    transform: scale(1.05);
+}
+
+button#downloadButton {
+    background-color:rgb(47, 0, 177);
+    color: white;
+    margin-top: 20px;
+}
+
+button#downloadButton:hover {
+    background-color: #218838;
+}
+
+#task-list {
+    margin-top: 30px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.task-item.low {
+    background-color: #e3f9e5;
+    border-left: 5px solid #28a745;
+}
+
+.task-item.medium {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffca2c;
+}
+
+.task-item.high {
+    background-color: #f8d7da;
+    border-left: 5px solid #e3342f;
+}
+
+.task-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task-item button {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+}
+
+.task-item button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+ul#task-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+    color: #4e73df;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button#modeToggle {
+    background-color: transparent;
+    border: 2px solid #4e73df;
+    color: #4e73df;
+    padding: 10px 18px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button#modeToggle:hover {
+    background-color: #4e73df;
+    color: white;
+    transform: scale(1.05);
+}
+
+button#modeToggle:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(78, 115, 223, 0.5);
+}
+
+button#startTimer {
+    background-color: #28a745;
+    color: white;
+}
+
+button#startTimer:hover {
+    background-color: #218838;
+}
+
+button#startTimer:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+button#resetTimer {
+    background-color: #ffc107;
+    color: white;
+}
+
+button#resetTimer:hover {
+    background-color: #e0a800;
+}
+
+button#resetTimer:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+}
+
+button#stopTimer {
+    background-color: #dc3545;
+    color: white;
+}
+
+button#stopTimer:hover {
+    background-color: #c82333;
+}
+
+button#stopTimer:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
